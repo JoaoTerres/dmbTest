@@ -1,4 +1,5 @@
-﻿using dbm.Api.Models;
+﻿using dbm.Api.DTO;
+using dbm.Api.Models;
 using dbm.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,22 +34,22 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] Product product)
+    public async Task<IActionResult> Create([FromBody] ProductDTO productDto)
     {
-        if (product == null)
+        if (productDto == null)
             return BadRequest();
 
-        await _productService.AddAsync(product);
-        return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
+        await _productService.AddAsync(productDto);
+        return CreatedAtAction(nameof(GetById), new { id = productDto.Id }, productDto);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] Product product)
+    public async Task<IActionResult> Update(int id, [FromBody] ProductDTO productDto)
     {
-        if (product == null || id != product.Id)
+        if (productDto == null || id != productDto.Id)
             return BadRequest();
 
-        await _productService.UpdateAsync(product);
+        await _productService.UpdateAsync(productDto);
         return NoContent();
     }
 
@@ -63,3 +64,4 @@ public class ProductController : ControllerBase
         return NoContent();
     }
 }
+

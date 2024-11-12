@@ -11,7 +11,7 @@
         "projectName": "dbm.Api",
         "projectPath": "C:\\Users\\jgter\\source\\repos\\dmbTest\\Dbm\\dbm.Api\\dbm.Api.csproj",
         "packagesPath": "C:\\Users\\jgter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jgter\\Source\\Repos\\dmbTest\\Dbm\\dbm.Api\\obj\\",
+        "outputPath": "C:\\Users\\jgter\\source\\repos\\dmbTest\\Dbm\\dbm.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jgter\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentMigrator": {
               "target": "Package",
               "version": "[6.2.0, )"
