@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dbm.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71a7b092851fdaa18f4f4b26a0836161b6b9cd6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fecf66f4ec253730fe2717195a1df9d5283a5c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("dbm.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dbm.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
