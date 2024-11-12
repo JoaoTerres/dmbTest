@@ -5108,19 +5108,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jterres\\.nuget\\packages\\": {}
+    "C:\\Users\\jgter\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jterres\\source\\repos\\Dbm\\Dbm\\dbm.Api\\dbm.Api.csproj",
+      "projectUniqueName": "C:\\Users\\jgter\\Source\\Repos\\dmbTest\\Dbm\\dbm.Api\\dbm.Api.csproj",
       "projectName": "dbm.Api",
-      "projectPath": "C:\\Users\\jterres\\source\\repos\\Dbm\\Dbm\\dbm.Api\\dbm.Api.csproj",
-      "packagesPath": "C:\\Users\\jterres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jterres\\source\\repos\\Dbm\\Dbm\\dbm.Api\\obj\\",
+      "projectPath": "C:\\Users\\jgter\\Source\\Repos\\dmbTest\\Dbm\\dbm.Api\\dbm.Api.csproj",
+      "packagesPath": "C:\\Users\\jgter\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jgter\\Source\\Repos\\dmbTest\\Dbm\\dbm.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jterres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jgter\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5198,7 +5198,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

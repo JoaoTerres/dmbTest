@@ -1,3 +1,4 @@
+using dbm.Api.Config;
 using dbm.Api.Context;
 using FluentMigrator.Runner;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,8 @@ builder.Services.AddFluentMigratorCore()
         .ScanIn(typeof(Program).Assembly).For.Migrations())
     .AddLogging(lb => lb.AddConsole());
 #endregion
+
+builder.Services.AddScopeds();
 
 var app = builder.Build();
 

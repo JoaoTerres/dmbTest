@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Config\" />
+    <Folder Include="DTO\" />
     <Folder Include="Services\Validations\" />
   </ItemGroup>
 
