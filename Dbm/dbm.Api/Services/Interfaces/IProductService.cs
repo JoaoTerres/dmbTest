@@ -1,12 +1,13 @@
-﻿using dbm.Api.Models;
+﻿using dbm.Api.DTO;
+using dbm.Api.Models;
 
 namespace dbm.Api.Services.Interfaces;
 
 public interface IProductService
 {
-    Task<Product> GetByIdAsync(int id);
-    Task<IEnumerable<Product>> GetAllAsync();
-    Task AddAsync(Product product);
-    Task UpdateAsync(Product product);
+    Task<IEnumerable<ProductDTO>> GetAllAsync();
+    Task<ProductDTO> GetByIdAsync(int id);
+    Task AddAsync(ProductDTO productDto);
+    Task UpdateAsync(ProductDTO productDto);
     Task DeleteAsync(int id);
 }
