@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OYUMkXAYjhA=",
+  "dgSpecHash": "aCdEIFNl8W8=",
   "success": true,
   "projectFilePath": "C:\\Users\\jgter\\source\\repos\\dmbTest\\Dbm\\dbm.Api\\dbm.Api.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,9 @@
     "C:\\Users\\jgter\\.nuget\\packages\\fluentmigrator.runner.snowflake\\6.2.0\\fluentmigrator.runner.snowflake.6.2.0.nupkg.sha512",
     "C:\\Users\\jgter\\.nuget\\packages\\fluentmigrator.runner.sqlite\\6.2.0\\fluentmigrator.runner.sqlite.6.2.0.nupkg.sha512",
     "C:\\Users\\jgter\\.nuget\\packages\\fluentmigrator.runner.sqlserver\\6.2.0\\fluentmigrator.runner.sqlserver.6.2.0.nupkg.sha512",
+    "C:\\Users\\jgter\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\jgter\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\jgter\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\jgter\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\jgter\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\jgter\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

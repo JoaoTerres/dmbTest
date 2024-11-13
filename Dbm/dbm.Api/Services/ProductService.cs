@@ -20,20 +20,21 @@ public class ProductService : IProductService
 
     public async Task<IEnumerable<ProductDTO>> GetAllAsync()
     {
-        var products = await _produtoRepository.GetAllAsync();
-        return _mapper.Map<IEnumerable<ProductDTO>>(products);
+        var productsEntity = await _produtoRepository.GetAllAsync();
+        return _mapper.Map<IEnumerable<ProductDTO>>(productsEntity);
     }
 
     public async Task<ProductDTO> GetByIdAsync(int id)
     {
-        var product = await _produtoRepository.GetByIdAsync(id);
-        return _mapper.Map<ProductDTO>(product);
+        var productsEntity = await _produtoRepository.GetByIdAsync(id);
+        return _mapper.Map<ProductDTO>(productsEntity);
     }
 
     public async Task AddAsync(ProductDTO productDto)
     {
         var product = _mapper.Map<Product>(productDto);
         await _produtoRepository.AddAsync(product);
+        product.Id = productDto.Id; 
     }
 
     public async Task UpdateAsync(ProductDTO productDto)
