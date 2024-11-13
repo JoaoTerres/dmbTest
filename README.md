@@ -29,7 +29,7 @@ O sistema permite cadastrar, listar, atualizar e excluir produtos, além de gara
 1. **Clone o repositório**:
 2. **Restaure as dependências do projeto**:
 3. **Execute a aplicação localmente**:
-4. **Ao executar o projeto as migrações seram geradas**
+4. **Ao executar o projeto as migrações serão geradas**
 
 Isso criará e aplicará a tabela `Produtos` no banco de dados.
 
