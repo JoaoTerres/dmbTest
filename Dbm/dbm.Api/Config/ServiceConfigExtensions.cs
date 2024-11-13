@@ -4,7 +4,7 @@ using dbm.Api.Repositories;
 using dbm.Api.Repositories.Interfaces;
 using dbm.Api.Services;
 using dbm.Api.Services.Interfaces;
-using dbm.Api.Services.Validations;
+using dbm.Api.Validations;
 using FluentValidation;
 
 namespace dbm.Api.Config;

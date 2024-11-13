@@ -4,56 +4,60 @@ using FluentMigrator.Runner;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-//.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ProductValidator>());
+namespace dbm.Api;
 
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-#region Context
-builder.Services.AddDbContext<AppDbContext>(options =>
+public class Program
 {
-    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    options.UseNpgsql(connectionString);
-});
-#endregion
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-#region FluentMigrator
-builder.Services.AddFluentMigratorCore()
-    .ConfigureRunner(runner => runner
-        .AddPostgres()
-        .WithGlobalConnectionString(builder.Configuration.GetConnectionString("DefaultConnection"))
-        .ScanIn(typeof(Program).Assembly).For.Migrations())
-    .AddLogging(lb => lb.AddConsole());
-#endregion
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
-#region AutoMapper
-    builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-#endregion
+        #region Context
+        builder.Services.AddDbContext<AppDbContext>(options =>
+        {
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            options.UseNpgsql(connectionString);
+        });
+        #endregion
 
-builder.Services.AddScopeds();
+        #region FluentMigrator
+        builder.Services.AddFluentMigratorCore()
+            .ConfigureRunner(runner => runner
+                .AddPostgres()
+                .WithGlobalConnectionString(builder.Configuration.GetConnectionString("DefaultConnection"))
+                .ScanIn(typeof(Program).Assembly).For.Migrations())
+            .AddLogging(lb => lb.AddConsole());
+        #endregion
 
-var app = builder.Build();
+        #region AutoMapper
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        #endregion
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+        builder.Services.AddScopeds();
+
+        var app = builder.Build();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseAuthorization();
+        app.MapControllers();
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
+            runner.MigrateUp();
+        }
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-using (var scope = app.Services.CreateScope())
-{
-    var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
-    runner.MigrateUp();
-}
-
-app.Run();
