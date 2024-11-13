@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aCdEIFNl8W8=",
+  "dgSpecHash": "aOWTcrFmO7M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jgter\\source\\repos\\dmbTest\\Dbm\\dbm.Api\\dbm.Api.csproj",
+  "projectFilePath": "C:\\Users\\jgter\\Source\\Repos\\dmbTest\\Dbm\\dbm.Api\\dbm.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jgter\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\jgter\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
