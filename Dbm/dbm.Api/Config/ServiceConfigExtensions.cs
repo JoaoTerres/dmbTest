@@ -1,7 +1,11 @@
-﻿using dbm.Api.Repositories;
+﻿using dbm.Api.DTO;
+using dbm.Api.Models;
+using dbm.Api.Repositories;
 using dbm.Api.Repositories.Interfaces;
 using dbm.Api.Services;
 using dbm.Api.Services.Interfaces;
+using dbm.Api.Services.Validations;
+using FluentValidation;
 
 namespace dbm.Api.Config;
 
@@ -20,5 +24,7 @@ public static class ServiceConfigExtensions
         #region repositories
         services.AddScoped<IProductRepository, ProductRepository>();
         #endregion
+
+        services.AddScoped<IValidator<ProductDTO>, ProductValidator>();
     }
 }

@@ -1,11 +1,15 @@
 using dbm.Api.Config;
 using dbm.Api.Context;
 using FluentMigrator.Runner;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+//.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ProductValidator>());
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -24,6 +28,10 @@ builder.Services.AddFluentMigratorCore()
         .WithGlobalConnectionString(builder.Configuration.GetConnectionString("DefaultConnection"))
         .ScanIn(typeof(Program).Assembly).For.Migrations())
     .AddLogging(lb => lb.AddConsole());
+#endregion
+
+#region AutoMapper
+    builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 #endregion
 
 builder.Services.AddScopeds();

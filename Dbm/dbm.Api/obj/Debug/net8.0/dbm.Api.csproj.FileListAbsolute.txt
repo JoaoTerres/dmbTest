@@ -332,3 +332,7 @@ C:\Users\jgter\Source\Repos\dmbTest\Dbm\dbm.Api\obj\Debug\net8.0\refint\dbm.Api.
 C:\Users\jgter\Source\Repos\dmbTest\Dbm\dbm.Api\obj\Debug\net8.0\dbm.Api.pdb
 C:\Users\jgter\Source\Repos\dmbTest\Dbm\dbm.Api\obj\Debug\net8.0\dbm.Api.genruntimeconfig.cache
 C:\Users\jgter\Source\Repos\dmbTest\Dbm\dbm.Api\obj\Debug\net8.0\ref\dbm.Api.dll
+C:\Users\jgter\source\repos\dmbTest\Dbm\dbm.Api\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\jgter\source\repos\dmbTest\Dbm\dbm.Api\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\jgter\source\repos\dmbTest\Dbm\dbm.Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\jgter\source\repos\dmbTest\Dbm\dbm.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
