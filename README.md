@@ -22,7 +22,7 @@ O sistema permite cadastrar, listar, atualizar e excluir produtos, além de gara
 - Antes de começar, certifique-se de que o seguinte está instalado na sua máquina:
 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/downloads/)
-- [.NET 8.0]([https://dotnet.microsoft.com/download/dotnet/6.0](https://dotnet.microsoft.com/pt-br/download/dotnet/8.0))
+- [.NET 8.0](https://dotnet.microsoft.com/download/dotnet/6.0](https://dotnet.microsoft.com/pt-br/download/dotnet/8.0))
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [Postgres](https://www.postgresql.org/download/)
 
